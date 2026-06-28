@@ -2,20 +2,16 @@ import pytest
 from src.preprocessor import preprocess_and_tokenize
 
 def test_preprocess_empty_text():
-    """Garante que strings vazias ou apenas espaços retornem listas vazias."""
     assert preprocess_and_tokenize("") == []
     assert preprocess_and_tokenize("    ") == []
     assert preprocess_and_tokenize("\n\n\r\n") == []
 
 def test_preprocess_only_punctuation():
-    """Garante que textos contendo apenas pontuação sejam ignorados."""
     assert preprocess_and_tokenize("!?,.:;---") == []
     assert preprocess_and_tokenize("!!!\n???", mode="line") == []
 
 def test_preprocess_words_normalization_and_punctuation():
-    """Garante a sanitização de pontuação e normalização para minúsculas em palavras."""
     text = "Olá, Mundo! Isso é um Teste."
-    # Sem remover stopwords para ver todos os tokens de palavra mapeados
     tokens = preprocess_and_tokenize(text, mode="word", remove_stopwords=False)
     
     expected = [
@@ -29,9 +25,7 @@ def test_preprocess_words_normalization_and_punctuation():
     assert tokens == expected
 
 def test_preprocess_remove_stopwords():
-    """Verifica a remoção correta de stopwords em português no modo word."""
     text = "O gato de botas na floresta."
-    # Com remoção de stopwords
     tokens_with = preprocess_and_tokenize(text, mode="word", remove_stopwords=True)
     expected_with = [
         ("gato", 2, 6),
@@ -40,7 +34,6 @@ def test_preprocess_remove_stopwords():
     ]
     assert tokens_with == expected_with
 
-    # Sem remoção de stopwords
     tokens_without = preprocess_and_tokenize(text, mode="word", remove_stopwords=False)
     expected_without = [
         ("o", 0, 1),
@@ -53,11 +46,9 @@ def test_preprocess_remove_stopwords():
     assert tokens_without == expected_without
 
 def test_preprocess_line_mode():
-    """Verifica a tokenização em linhas, limpando pontuação e espaços múltiplos."""
     text = "Olá, mundo!   \nComo   vai você?\n\nLinha de teste!!!"
     tokens = preprocess_and_tokenize(text, mode="line")
     
-    # Índices correspondem ao início e fim da linha bruta original
     expected = [
         ("olá mundo", 0, 15),
         ("como vai você", 16, 33),
