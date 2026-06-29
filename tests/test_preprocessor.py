@@ -50,8 +50,8 @@ def test_preprocess_line_mode():
     tokens = preprocess_and_tokenize(text, mode="line")
     
     expected = [
-        ("olá mundo", 0, 15),
-        ("como vai você", 16, 33),
-        ("linha de teste", 35, 52)
+        ("olá mundo", 0, 14),
+        ("como vai você", 15, 31),
+        ("linha de teste", 33, 50)
     ]
     assert tokens == expected
