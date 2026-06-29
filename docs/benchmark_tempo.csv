@@ -1,0 +1,13 @@
+algoritmo,tokens,tempo_ms
+LCS,20,0.1093
+Smith-Waterman,20,0.18
+Levenshtein,20,0.1271
+LCS,40,0.3921
+Smith-Waterman,40,0.6548
+Levenshtein,40,0.6189
+LCS,80,1.5534
+Smith-Waterman,80,2.5961
+Levenshtein,80,1.9207
+LCS,120,3.3987
+Smith-Waterman,120,5.8137
+Levenshtein,120,4.2625

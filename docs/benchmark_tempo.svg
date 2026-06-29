@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="480" viewBox="0 0 920 480">
+<rect width="100%" height="100%" fill="#f7f8fb"/>
+<line x1="76" y1="32" x2="76" y2="414" stroke="#64748b" stroke-width="1"/>
+<line x1="76" y1="414" x2="892" y2="414" stroke="#64748b" stroke-width="1"/>
+<text x="460.0" y="24" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Tempo medio por tamanho de entrada</text>
+<text x="460.0" y="464" text-anchor="middle" font-family="Arial" font-size="13" fill="#334155">Tokens por texto</text>
+<text x="18" y="240.0" transform="rotate(-90 18 240.0)" text-anchor="middle" font-family="Arial" font-size="13" fill="#334155">Tempo medio (ms)</text>
+<line x1="76" y1="414.00" x2="892" y2="414.00" stroke="#d9dfeb" stroke-width="1"/>
+<text x="66" y="418.00" text-anchor="end" font-family="Arial" font-size="12" fill="#475569">0.00</text>
+<line x1="76" y1="318.50" x2="892" y2="318.50" stroke="#d9dfeb" stroke-width="1"/>
+<text x="66" y="322.50" text-anchor="end" font-family="Arial" font-size="12" fill="#475569">1.45</text>
+<line x1="76" y1="223.00" x2="892" y2="223.00" stroke="#d9dfeb" stroke-width="1"/>
+<text x="66" y="227.00" text-anchor="end" font-family="Arial" font-size="12" fill="#475569">2.91</text>
+<line x1="76" y1="127.50" x2="892" y2="127.50" stroke="#d9dfeb" stroke-width="1"/>
+<text x="66" y="131.50" text-anchor="end" font-family="Arial" font-size="12" fill="#475569">4.36</text>
+<line x1="76" y1="32.00" x2="892" y2="32.00" stroke="#d9dfeb" stroke-width="1"/>
+<text x="66" y="36.00" text-anchor="end" font-family="Arial" font-size="12" fill="#475569">5.81</text>
+<text x="76.00" y="436" text-anchor="middle" font-family="Arial" font-size="12" fill="#475569">20</text>
+<text x="239.20" y="436" text-anchor="middle" font-family="Arial" font-size="12" fill="#475569">40</text>
+<text x="565.60" y="436" text-anchor="middle" font-family="Arial" font-size="12" fill="#475569">80</text>
+<text x="892.00" y="436" text-anchor="middle" font-family="Arial" font-size="12" fill="#475569">120</text>
+<polyline points="76.00,406.82 239.20,388.24 565.60,311.93 892.00,190.68" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="76.00" cy="406.82" r="4" fill="#2563eb"/>
+<title>LCS: 0.1093 ms</title>
+<circle cx="239.20" cy="388.24" r="4" fill="#2563eb"/>
+<title>LCS: 0.3921 ms</title>
+<circle cx="565.60" cy="311.93" r="4" fill="#2563eb"/>
+<title>LCS: 1.5534 ms</title>
+<circle cx="892.00" cy="190.68" r="4" fill="#2563eb"/>
+<title>LCS: 3.3987 ms</title>
+<polyline points="76.00,402.17 239.20,370.98 565.60,243.42 892.00,32.00" fill="none" stroke="#d97706" stroke-width="3"/>
+<circle cx="76.00" cy="402.17" r="4" fill="#d97706"/>
+<title>Smith-Waterman: 0.1800 ms</title>
+<circle cx="239.20" cy="370.98" r="4" fill="#d97706"/>
+<title>Smith-Waterman: 0.6548 ms</title>
+<circle cx="565.60" cy="243.42" r="4" fill="#d97706"/>
+<title>Smith-Waterman: 2.5961 ms</title>
+<circle cx="892.00" cy="32.00" r="4" fill="#d97706"/>
+<title>Smith-Waterman: 5.8137 ms</title>
+<polyline points="76.00,405.65 239.20,373.33 565.60,287.80 892.00,133.92" fill="none" stroke="#059669" stroke-width="3"/>
+<circle cx="76.00" cy="405.65" r="4" fill="#059669"/>
+<title>Levenshtein: 0.1271 ms</title>
+<circle cx="239.20" cy="373.33" r="4" fill="#059669"/>
+<title>Levenshtein: 0.6189 ms</title>
+<circle cx="565.60" cy="287.80" r="4" fill="#059669"/>
+<title>Levenshtein: 1.9207 ms</title>
+<circle cx="892.00" cy="133.92" r="4" fill="#059669"/>
+<title>Levenshtein: 4.2625 ms</title>
+<rect x="716" y="44" width="14" height="14" fill="#2563eb" rx="2"/>
+<text x="738" y="56" font-family="Arial" font-size="13" fill="#172033">LCS</text>
+<rect x="716" y="68" width="14" height="14" fill="#d97706" rx="2"/>
+<text x="738" y="80" font-family="Arial" font-size="13" fill="#172033">Smith-Waterman</text>
+<rect x="716" y="92" width="14" height="14" fill="#059669" rx="2"/>
+<text x="738" y="104" font-family="Arial" font-size="13" fill="#172033">Levenshtein</text>
+</svg>
