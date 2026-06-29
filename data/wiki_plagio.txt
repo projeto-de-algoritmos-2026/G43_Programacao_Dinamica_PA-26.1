@@ -1,0 +1,1 @@
+O método de Programação Dinâmica serve para resolver problemas quebrando-os em subproblemas mais simples. Esse método é muito usado quando temos subproblemas sobrepostos e subestrutura ótima. Desta forma, o tempo de execução diminui muito pois guardamos as respostas dos subproblemas já resolvidos, evitando refazer contas desnecessárias.

@@ -1,0 +1,7 @@
+def obter_fatorial(n):
+    if n == 0 or n == 1:
+        return 1
+    val = 1
+    for x in range(2, n + 1):
+        val = val * x
+    return val

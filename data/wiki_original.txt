@@ -1,0 +1,1 @@
+Programação Dinâmica é um método para resolver problemas complexos quebrando-os em subproblemas mais simples. Ela é aplicável a problemas que apresentam subproblemas sobrepostos e subestrutura ótima. O tempo de execução é drasticamente reduzido ao armazenar os resultados dos subproblemas já resolvidos para evitar recomputações desnecessárias.
