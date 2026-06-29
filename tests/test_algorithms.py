@@ -8,6 +8,9 @@ from src.algorithms.smith_waterman import (
     compute_dp_matrix as compute_sw_matrix,
     traceback_alignment as traceback_sw_alignment
 )
+from src.algorithms.edit_distance import (
+    compute_dp_matrix as compute_edit_matrix
+)
 
 def test_lcs_empty_input():
     tokens_a = []
@@ -111,3 +114,32 @@ def test_sw_local_alignment():
         (9, 7)
     ]
     assert alignment == expected
+
+def test_edit_distance_empty_input():
+    tokens_a = []
+    tokens_b = [("gato", 0, 4)]
+    
+    matrix = compute_edit_matrix(tokens_a, tokens_b)
+    assert matrix[0][1] == 1.0
+    assert matrix[0][0] == 0.0
+
+def test_edit_distance_no_match():
+    tokens_a = [("a", 0, 1), ("b", 2, 3)]
+    tokens_b = [("c", 0, 1), ("d", 2, 3)]
+    
+    matrix = compute_edit_matrix(tokens_a, tokens_b)
+    assert matrix[2][2] == 2.0
+
+def test_edit_distance_exact_match():
+    tokens_a = [("a", 0, 1), ("b", 2, 3)]
+    tokens_b = [("a", 0, 1), ("b", 2, 3)]
+    
+    matrix = compute_edit_matrix(tokens_a, tokens_b)
+    assert matrix[2][2] == 0.0
+
+def test_edit_distance_partial_match():
+    tokens_a = [("o", 0, 1), ("gato", 2, 6)]
+    tokens_b = [("o", 0, 1), ("cachorro", 2, 10)]
+    
+    matrix = compute_edit_matrix(tokens_a, tokens_b)
+    assert matrix[2][2] == 1.0
